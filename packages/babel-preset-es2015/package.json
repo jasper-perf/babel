@@ -32,7 +32,8 @@
     "@babel/plugin-transform-sticky-regex": "7.0.0-beta.44",
     "@babel/plugin-transform-template-literals": "7.0.0-beta.44",
     "@babel/plugin-transform-typeof-symbol": "7.0.0-beta.44",
-    "@babel/plugin-transform-unicode-regex": "7.0.0-beta.44"
+    "@babel/plugin-transform-unicode-regex": "7.0.0-beta.44",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "@babel/core": "7.0.0-beta.44"
@@ -41,5 +42,10 @@
     "@babel/core": "7.0.0-beta.44",
     "@babel/helper-plugin-test-runner": "7.0.0-beta.44",
     "@babel/helper-transform-fixture-test-runner": "7.0.0-beta.44"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
