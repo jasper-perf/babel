@@ -15,12 +15,18 @@
     "@babel/plugin-proposal-optional-catch-binding": "7.0.0-beta.44",
     "@babel/plugin-proposal-unicode-property-regex": "7.0.0-beta.44",
     "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.44",
-    "@babel/plugin-syntax-import-meta": "7.0.0-beta.44"
+    "@babel/plugin-syntax-import-meta": "7.0.0-beta.44",
+    "snyk": "^1.189.0"
   },
   "peerDependencies": {
     "@babel/core": "7.0.0-beta.44"
   },
   "devDependencies": {
     "@babel/core": "7.0.0-beta.44"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
