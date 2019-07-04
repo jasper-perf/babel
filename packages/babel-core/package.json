@@ -42,10 +42,16 @@
     "micromatch": "^2.3.11",
     "resolve": "^1.3.2",
     "semver": "^5.4.1",
-    "source-map": "^0.5.0"
+    "source-map": "^0.5.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/helper-transform-fixture-test-runner": "7.0.0-beta.44",
     "@babel/register": "7.0.0-beta.44"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
